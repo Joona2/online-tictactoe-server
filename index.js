@@ -6,7 +6,15 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://main--bright-biscuit-b1c8e4.netlify.app/",
+      "http://localhost:3000/",
+    ],
+    credentials: true,
+  })
+);
 
 const server = http.createServer(app);
 let connectedPlayers = 0;
