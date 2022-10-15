@@ -31,7 +31,10 @@ function isIn2DArray(value, array) {
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://main--bright-biscuit-b1c8e4.netlify.app/",
+    ],
     methods: ["GET", "POST"],
   },
 });
