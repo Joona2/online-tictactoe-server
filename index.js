@@ -36,6 +36,7 @@ const io = new Server(server, {
       "https://main--bright-biscuit-b1c8e4.netlify.app/",
     ],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
