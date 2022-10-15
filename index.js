@@ -1,20 +1,6 @@
 import TicTacToe from "./games/TicTacToe.js";
-import express from "express";
 import http from "http";
 import { Server } from "socket.io";
-import cors from "cors";
-
-const app = express();
-
-app.use(
-  cors({
-    origin: [
-      "https://main--bright-biscuit-b1c8e4.netlify.app/",
-      "http://localhost:3000/",
-    ],
-    credentials: true,
-  })
-);
 
 const server = http.createServer(app);
 let connectedPlayers = 0;
