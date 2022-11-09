@@ -12,10 +12,12 @@ class TicTacToe {
     this.player2 = null;
     this.roomID = Math.floor(Math.random() * 1000000000000000);
     this.successfulMove = false;
+    this.numberOfPlayers = 1;
   }
 
   setPlayer2(player2) {
     this.player2 = player2;
+    this.numberOfPlayers = 2;
   }
 
   tryMove(move, playerID) {
